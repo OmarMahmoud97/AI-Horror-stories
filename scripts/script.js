@@ -1,6 +1,6 @@
 // form handling
 
-let startingStr = `Topic: Breakfast\nTwo-Sentence Horror Story: He always stops crying when I pour the milk on his cereal. I just have to remember not to let him see his face on the carton.\n    \nTopic: Wind\nTen-Sentence Horror Story:`;
+let startingStr = `Topic: Breakfast\nSeven-Sentence Horror Story: He always stops crying when I pour the milk on his cereal. I just have to remember not to let him see his face on the carton.\n    \nTopic: Horror\nSeven-Sentence Horror Story:`;
 const handleForm = (event) => {
   event.preventDefault();
   // chatBox.innerHTML = "";
@@ -19,7 +19,7 @@ const handleForm = (event) => {
       {
         model: "text-davinci-002",
         prompt: startingStr,
-        temperature: 0.8,
+        temperature: 0.5,
         max_tokens: 60,
         top_p: 1,
         frequency_penalty: 0.5,
@@ -28,7 +28,7 @@ const handleForm = (event) => {
       {
         headers: {
           Authorization:
-            "Bearer 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",
+            "Bearer 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",
           "Content-Type": "application/json",
         },
       }
