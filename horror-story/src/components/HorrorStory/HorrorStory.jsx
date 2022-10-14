@@ -78,9 +78,7 @@ const HorrorStory = () => {
                 </div>
               </div>
               <div className="navbar__center">Horror Story</div>
-              <div className="navbar__right">
-                <p>Test</p>
-              </div>
+              <div className="navbar__right"></div>
             </div>
           </nav>
         </section>
