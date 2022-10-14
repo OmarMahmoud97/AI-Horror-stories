@@ -4,13 +4,13 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import HorrorStory from "./components/HorrorStory/HorrorStory";
-import VoiceTotext from "./components/VoiceTotext/VoiceTotext";
+import VoiceToText from "./components/VoiceToText/VoiceToText";
 
 function App() {
   return (
     <>
       <HorrorStory />
-      <VoiceTotext />
+      <VoiceToText />
     </>
   );
 }
