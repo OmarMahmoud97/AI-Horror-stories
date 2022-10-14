@@ -27,6 +27,7 @@ function App() {
   };
   return (
     <>
+      <Landing />
       <HorrorStory result={result} />
       <VoiceToText
         onClick={onClickHandler}
