@@ -159,6 +159,17 @@
   color: white;
   text-align: center;
   font-family: "Sigmar One", cursive;
+  &--bottom {
+    font-size: 0.8rem;
+    width: 80%;
+  }
+}
+
+.navbar__text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .navbar__switch {
   display: flex;

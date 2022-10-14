@@ -66,9 +66,9 @@ const HorrorStory = (props) => {
               <p className="navbar__text">
                 Say Two words and prepare to be spooked!
               </p>
-              <p className="navbar__text">
-                And if you're too scared to speak just refresh the page and the
-                ai will make a brand new story for you
+              <p className="navbar__text navbar__text--bottom">
+                And if you're too scared to speak just refresh the page and
+                watch the Artificial Intelligence make a story for you{" "}
               </p>
             </div>
           </div>
