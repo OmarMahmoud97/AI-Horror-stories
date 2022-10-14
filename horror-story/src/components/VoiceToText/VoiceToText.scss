@@ -34,15 +34,20 @@ body {
   &__voice {
     border: 2px green solid;
     height: 10vh;
-    width: 672px;
+    width: 43rem;
     border-radius: 0.25rem;
     text-align: center;
+    background-color: black;
+    color: white;
   }
 
   &__speak {
     margin: 0 auto;
-    width: 672px;
+    width: 43rem;
     height: 2rem;
     border-radius: 0.25rem;
+  }
+  &__text {
+    color: white;
   }
 }

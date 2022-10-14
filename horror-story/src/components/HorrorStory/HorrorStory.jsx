@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./HorrorStory.scss";
+import bgVid from "../../assets/videos/lightning.mp4";
 
 const HorrorStory = (props) => {
   const [comments, setComments] = useState();
@@ -54,7 +55,7 @@ const HorrorStory = (props) => {
   return (
     <>
       <video className="background-video" autoPlay loop muted poster="">
-        <source src="" type="" />
+        <source src={bgVid} type="video/mp4" />
       </video>
 
       <section className="navbar">
