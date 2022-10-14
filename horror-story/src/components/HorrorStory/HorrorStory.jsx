@@ -12,14 +12,9 @@ const HorrorStory = (props) => {
   useEffect(() => {
     setLoading(true);
 
-    // chatBox.innerHTML = "";
-
     const userPrompt = props.result;
 
-    // const formData = {
-    //   message: userPrompt,
-    // };
-    let openAiPrompt = `Topic: Breakfast\nSeven-Sentence Horror Story: He always stops crying when I pour the milk on his cereal. I just have to remember not to let him see his face on the carton.\n    \nTopic: Horror\nSeven-Sentence Horror Story:`;
+    let openAiPrompt = `Topic: Horror\nSeven-Sentence Horror Story:`;
 
     setComments(userPrompt);
 
@@ -34,7 +29,7 @@ const HorrorStory = (props) => {
           temperature: 0.5,
           max_tokens: 60,
           top_p: 1,
-          frequency_penalty: 0.5,
+          frequency_penalty: 1,
           presence_penalty: 0,
         },
         {
@@ -50,7 +45,6 @@ const HorrorStory = (props) => {
         setResponse(response.data.choices[0].text);
 
         setLoading(false);
-        // clearInput();
       })
       .catch((err) => {
         console.log(err);
@@ -91,7 +85,6 @@ const HorrorStory = (props) => {
             <div className="chatbox__left"></div>
           </div>
           <div className="chatbox__form">
-            {/* <form onSubmit={} className="chatbox__form" id="form"> */}
             <textarea
               className="chatbox__input"
               name="message"
@@ -99,15 +92,6 @@ const HorrorStory = (props) => {
               type="submit"
               enterKeyHint="send"
             ></textarea>
-            {/* <button
-              className="chatbox__submit"
-              name="submit"
-              type="submit"
-              value="submit"
-            >
-              Send
-            </button> */}
-            {/* </form> */}
           </div>
         </div>
       </section>
