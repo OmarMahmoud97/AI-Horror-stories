@@ -2,27 +2,22 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-const HorrorStory = () => {
+const HorrorStory = (props) => {
   const [comments, setComments] = useState();
   const [response, setResponse] = useState();
   const [loading, setLoading] = useState(false);
 
-  // const { videoId } = useParams();
-
-  let openAiPrompt = `Topic: Breakfast\nSeven-Sentence Horror Story: He always stops crying when I pour the milk on his cereal. I just have to remember not to let him see his face on the carton.\n    \nTopic: Horror\nSeven-Sentence Horror Story:`;
-
-  const handleForm = (event) => {
-    event.preventDefault();
-
+  useEffect(() => {
     setLoading(true);
 
     // chatBox.innerHTML = "";
 
-    const userPrompt = event.target.message.value;
+    const userPrompt = props.result;
 
     // const formData = {
     //   message: userPrompt,
     // };
+    let openAiPrompt = `Topic: Breakfast\nSeven-Sentence Horror Story: He always stops crying when I pour the milk on his cereal. I just have to remember not to let him see his face on the carton.\n    \nTopic: Horror\nSeven-Sentence Horror Story:`;
 
     setComments(userPrompt);
 
@@ -59,7 +54,8 @@ const HorrorStory = () => {
       .catch((err) => {
         console.log(err);
       });
-  };
+  }, [props.result]);
+
   return (
     <>
       <video className="background-video" autoPlay loop muted poster="">
@@ -91,23 +87,23 @@ const HorrorStory = () => {
             <div className="chatbox__left"></div>
           </div>
           <div className="chatbox__form">
-            <form onSubmit={handleForm} className="chatbox__form" id="form">
-              <textarea
-                className="chatbox__input"
-                name="message"
-                placeholder="Type your message here ..."
-                type="submit"
-                enterKeyHint="send"
-              ></textarea>
-              <button
-                className="chatbox__submit"
-                name="submit"
-                type="submit"
-                value="submit"
-              >
-                Send
-              </button>
-            </form>
+            {/* <form onSubmit={} className="chatbox__form" id="form"> */}
+            <textarea
+              className="chatbox__input"
+              name="message"
+              placeholder="Type your message here ..."
+              type="submit"
+              enterKeyHint="send"
+            ></textarea>
+            <button
+              className="chatbox__submit"
+              name="submit"
+              type="submit"
+              value="submit"
+            >
+              Send
+            </button>
+            {/* </form> */}
             {loading && <p>Loading...</p>}
             {response && <p>{response}</p>}
           </div>
