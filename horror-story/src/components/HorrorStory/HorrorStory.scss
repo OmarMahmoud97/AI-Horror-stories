@@ -10,7 +10,7 @@
   z-index: 1;
   overflow: hidden;
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   opacity: 0.75;
 }
 
@@ -155,8 +155,10 @@
   justify-content: center;
 }
 .navbar__text {
-  padding: 1rem;
+  padding: 0.5rem;
   color: white;
+  text-align: center;
+  font-family: "Sigmar One", cursive;
 }
 .navbar__switch {
   display: flex;
