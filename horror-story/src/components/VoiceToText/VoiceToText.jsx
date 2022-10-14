@@ -10,9 +10,9 @@ export default function VoiceTotext(props) {
             <h1 className="voiceToText__header">Voice 2 Text</h1>
           </div>
           <div className="voiceToText__textbox">
-            <div className="voiceToText__wrapper">
+            <div className="voiceToText__container">
               <p className="voiceToText__text">
-                {props.isSpeaking ? "Speaking..." : "Waiting..."}
+                {props.isSpeaking ? "Speak Now..." : "..."}
               </p>
               <p className="voiceToText__voice">
                 {props.result && props.result}
@@ -21,7 +21,7 @@ export default function VoiceTotext(props) {
           </div>
           <div className="voiceToText__button">
             <button onClick={props.onClick} className="voiceToText__speak">
-              Click To Speak!
+              Click & Speak!
             </button>
           </div>
         </div>

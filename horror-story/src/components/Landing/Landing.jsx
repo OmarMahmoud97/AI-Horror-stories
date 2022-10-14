@@ -1,4 +1,5 @@
 import "./Landing.scss";
+import "../../assets/fonts/Creepster-Regular.ttf";
 
 export default function landing() {
   return (

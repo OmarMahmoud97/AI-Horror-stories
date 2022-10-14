@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   font-size: 1.2rem;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -19,8 +18,20 @@ body {
 .voiceToText {
   width: 100%;
   display: flex;
-  align-items: top;
+  align-items: center;
   justify-content: center;
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
   &__header {
     display: none;
@@ -32,9 +43,8 @@ body {
   }
 
   &__voice {
-    border: 2px green solid;
     height: 10vh;
-    width: 43rem;
+    width: 50%;
     border-radius: 0.25rem;
     text-align: center;
     background-color: black;
@@ -43,11 +53,16 @@ body {
 
   &__speak {
     margin: 0 auto;
-    width: 43rem;
+    width: 50%;
     height: 2rem;
     border-radius: 0.25rem;
   }
   &__text {
     color: white;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

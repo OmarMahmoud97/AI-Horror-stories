@@ -1,14 +1,17 @@
+@use "../../styles/fonts";
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
 .landing {
   margin: 0;
-  font-family: Montserrat;
-  font-size: 40px;
-  color: var(--white);
+  font-size: 8rem;
+  color: white;
   letter-spacing: 0.7em;
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 100vh;
+  font-weight: bold;
 }
 .gap {
   margin: 0 1rem;
