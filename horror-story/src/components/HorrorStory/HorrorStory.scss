@@ -37,7 +37,6 @@
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
   padding-top: 0.5rem;
-  overflow: scroll;
   z-index: 1;
 }
 .chatbox__form {
@@ -46,6 +45,7 @@
   width: 95%;
 }
 .chatbox__input {
+  display: none;
   width: 90%;
   border-radius: 1rem 0 0 1rem;
   padding: 1rem;

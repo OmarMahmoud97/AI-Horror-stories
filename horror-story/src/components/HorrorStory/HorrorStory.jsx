@@ -99,14 +99,14 @@ const HorrorStory = (props) => {
               type="submit"
               enterKeyHint="send"
             ></textarea>
-            <button
+            {/* <button
               className="chatbox__submit"
               name="submit"
               type="submit"
               value="submit"
             >
               Send
-            </button>
+            </button> */}
             {/* </form> */}
           </div>
         </div>
