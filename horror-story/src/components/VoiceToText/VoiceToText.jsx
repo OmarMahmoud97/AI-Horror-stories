@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./VoiceToText.scss";
 
-export default function voice2text() {
+export default function VoiceTotext() {
   let SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
   let recognition = new SpeechRecognition();
