@@ -61,37 +61,32 @@ const HorrorStory = (props) => {
       <section className="navbar">
         <nav className="navbar__container">
           <div className="navbar__wrapper">
-            <div className="navbar__left">
-              <div className="navbar__date">
-                <p className="navbar__date-text" id="clock">
-                  <span id="clock"></span>
-                </p>
-              </div>
-            </div>
             <div className="navbar__center">Horror Story</div>
-            <div className="navbar__right"></div>
+            <div className="navbar__text-container">
+              <p className="navbar__text">
+                Say Two words and prepare to be spooked!
+              </p>
+            </div>
           </div>
         </nav>
       </section>
       <section className="chatbox">
         <div className="chatbox__wrapper">
-          <div className="chatbox__container">
-            <div className="chatbox__left">
-              {loading && <p className="chatbox__left-msg">Loading...</p>}
-              {response && <p className="chatbox__left-msg">{response}</p>}
-            </div>
-            <div className="chatbox__right"></div>
-            <div className="chatbox__left"></div>
+          <div className="chatbox__left">
+            {loading && <p className="chatbox__left-msg">Loading...</p>}
+            {response && <p className="chatbox__left-msg">{response}</p>}
           </div>
-          <div className="chatbox__form">
-            <textarea
-              className="chatbox__input"
-              name="message"
-              placeholder="Type your message here ..."
-              type="submit"
-              enterKeyHint="send"
-            ></textarea>
-          </div>
+          <div className="chatbox__right"></div>
+          <div className="chatbox__left"></div>
+        </div>
+        <div className="chatbox__form">
+          <textarea
+            className="chatbox__input"
+            name="message"
+            placeholder="Type your message here ..."
+            type="submit"
+            enterKeyHint="send"
+          ></textarea>
         </div>
       </section>
     </>
