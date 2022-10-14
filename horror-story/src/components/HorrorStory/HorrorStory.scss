@@ -9,6 +9,7 @@
   z-index: 1;
   overflow: hidden;
   width: 100%;
+  height: 55vh;
 }
 
 .chatbox__wrapper {
@@ -19,9 +20,8 @@
     rgba(0, 0, 0, 1) 91%
   );
 
-  height: 85vh;
-  min-width: 28rem;
-  max-width: 28rem;
+  height: 70vh;
+  width: 40vw;
   border-radius: 0 0 1rem 1rem;
   padding-top: 0.5rem;
   display: flex;
@@ -33,7 +33,7 @@
 .chatbox__container {
   margin-top: 0.5rem;
   width: 95%;
-  height: 100%;
+  height: 70%;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
   padding-top: 0.5rem;
@@ -127,8 +127,6 @@
   width: 40%;
   background-color: rgba(8, 29, 1, 1);
   border-radius: 1rem 1rem 0 0;
-  min-width: 28rem;
-  max-width: 28rem;
 }
 .navbar__wrapper {
   min-width: 28rem;
