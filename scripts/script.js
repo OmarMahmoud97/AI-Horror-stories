@@ -28,7 +28,7 @@ const handleForm = (event) => {
       {
         headers: {
           Authorization:
-            "Bearer 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",
+            "Bearer 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",
           "Content-Type": "application/json",
         },
       }
