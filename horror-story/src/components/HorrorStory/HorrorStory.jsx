@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import "./HorrorStory.scss";
 const HorrorStory = () => {
   const [comments, setComments] = useState();
   const [response, setResponse] = useState();
@@ -49,7 +50,6 @@ const HorrorStory = () => {
       )
 
       .then((response) => {
-        // createNewComment(response.data.choices[0].text);
         console.log(response);
         setResponse(response.data.choices[0].text);
 
@@ -62,57 +62,60 @@ const HorrorStory = () => {
   };
   return (
     <>
-      <video className="background-video" autoPlay loop muted poster="">
-        <source src="" type="" />
-      </video>
+      <div className="generator">
+        <video className="background-video" autoPlay loop muted poster="">
+          <source src="" type="" />
+        </video>
 
-      <section className="navbar">
-        <nav className="navbar__container">
-          <div className="navbar__wrapper">
-            <div className="navbar__left">
-              <div className="navbar__date">
-                <p className="navbar__date-text" id="clock">
-                  <span id="clock"></span>
-                </p>
+        <section className="navbar">
+          <nav className="navbar__container">
+            <div className="navbar__wrapper">
+              <div className="navbar__left">
+                <div className="navbar__date">
+                  <p className="navbar__date-text" id="clock">
+                    <span id="clock"></span>
+                  </p>
+                </div>
+              </div>
+              <div className="navbar__center">Horror Story</div>
+              <div className="navbar__right">
+                <p>Test</p>
               </div>
             </div>
-            <div className="navbar__center">Horror Story</div>
-            <div className="navbar__right">
-              <p>Test</p>
+          </nav>
+        </section>
+        <section className="chatbox">
+          <div className="chatbox__wrapper">
+            <div className="chatbox__container">
+              <div className="chatbox__left">
+                {response && <p className="chatbox__left-msg">{response}</p>}
+              </div>
+              <div className="chatbox__right"></div>
+              <div className="chatbox__left"></div>
+            </div>
+            <div className="chatbox__form">
+              <form onSubmit={handleForm} className="chatbox__form" id="form">
+                <textarea
+                  className="chatbox__input"
+                  name="message"
+                  placeholder="Type your message here ..."
+                  type="submit"
+                  enterKeyHint="send"
+                ></textarea>
+                <button
+                  className="chatbox__submit"
+                  name="submit"
+                  type="submit"
+                  value="submit"
+                >
+                  Send
+                </button>
+              </form>
+              {loading && <p>Loading...</p>}
             </div>
           </div>
-        </nav>
-      </section>
-      <section className="chatbox">
-        <div className="chatbox__wrapper">
-          <div className="chatbox__container">
-            <div className="chatbox__left"></div>
-            <div className="chatbox__right"></div>
-            <div className="chatbox__left"></div>
-          </div>
-          <div className="chatbox__form">
-            <form onSubmit={handleForm} className="chatbox__form" id="form">
-              <textarea
-                className="chatbox__input"
-                name="message"
-                placeholder="Type your message here ..."
-                type="submit"
-                enterKeyHint="send"
-              ></textarea>
-              <button
-                className="chatbox__submit"
-                name="submit"
-                type="submit"
-                value="submit"
-              >
-                Send
-              </button>
-            </form>
-            {loading && <p>Loading...</p>}
-            {response && <p>{response}</p>}
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };
