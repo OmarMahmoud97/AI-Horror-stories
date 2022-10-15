@@ -15,7 +15,7 @@ const HorrorStory = (props) => {
 
     const userPrompt = props.result;
 
-    let openAiPrompt = `Topic: Horror\nSeven-Sentence Horror Story:`;
+    let openAiPrompt = `Topic: Horror\nTen-Sentence Horror Story:`;
 
     setComments(userPrompt);
 
@@ -54,6 +54,14 @@ const HorrorStory = (props) => {
 
   return (
     <>
+      <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+        rel="stylesheet"
+      />
       <video className="background-video" autoPlay loop muted poster="">
         <source src={bgVid} type="video/mp4" />
       </video>
