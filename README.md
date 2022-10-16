@@ -1,6 +1,7 @@
 # AI-Generated Horror Stories Using Prompt Generated From Voice Using The Microphone On Running Device.
-[horror-story.netlify.app
-](https://horror-story.netlify.app/)
+
+www.ai.horror.story.com
+
 ## Created by 
 #### Omar Mahmoud || Nasmin Uddin || Atticus Cox
 
