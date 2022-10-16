@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixin" as *;
+
 .landing {
   margin: 0;
   font-size: 8rem;
@@ -10,9 +12,23 @@
   height: 100vh;
   font-weight: bold;
   padding: 1rem;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__letter {
+    width: 1rem;
+    @include media-tablet {
+      width: 3rem;
+    }
+  }
 }
 .gap {
-  margin: 0 1rem;
+  margin: 0 0.2rem;
+  @include media-tablet {
+    margin: 0 0.6rem;
+  }
 }
 #I {
   opacity: 1;

@@ -1,0 +1,21 @@
+@import "./Variables.scss";
+
+// Media Queries
+@mixin media-tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+// Display
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}

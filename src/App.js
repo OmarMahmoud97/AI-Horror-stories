@@ -2,6 +2,7 @@ import { useState } from "react";
 import HorrorStory from "./components/HorrorStory/HorrorStory";
 import VoiceToText from "./components/VoiceToText/VoiceToText";
 import Landing from "./components/Landing/Landing";
+import bgVid from "./assets/videos/lightning.mp4";
 
 function App() {
   let SpeechRecognition =
@@ -25,12 +26,17 @@ function App() {
     <>
       <Landing />
       <div className="ai-container">
-        <HorrorStory result={result} />
-        <VoiceToText
-          onClick={onClickHandler}
-          isSpeaking={isSpeaking}
-          result={result}
-        />
+        <video className="background-video" autoPlay loop muted poster="">
+          <source src={bgVid} type="video/mp4" />
+        </video>
+        <div className="ai-wrapper">
+          <HorrorStory result={result} />
+          <VoiceToText
+            onClick={onClickHandler}
+            isSpeaking={isSpeaking}
+            result={result}
+          />
+        </div>
       </div>
     </>
   );
