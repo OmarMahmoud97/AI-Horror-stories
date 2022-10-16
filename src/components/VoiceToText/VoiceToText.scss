@@ -1,3 +1,4 @@
+@use "../../styles/partials/mixin" as *;
 .container {
   display: flex;
   align-items: center;
@@ -34,7 +35,7 @@
 
   &__voice {
     height: 10vh;
-    width: 50%;
+    width: 80%;
     border-radius: 100%;
     text-align: center;
     background-color: black;
@@ -43,11 +44,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include media-tablet {
+      width: 50%;
+    }
   }
 
   &__speak {
     margin: 0 auto;
-    width: 10%;
+    width: 30%;
     height: 2rem;
     border-radius: 0.25rem;
     background-color: blue;
@@ -56,6 +60,9 @@
     font-weight: bold;
     font-size: 0.8rem;
     cursor: pointer;
+    @include media-tablet {
+      width: 10%;
+    }
   }
   &__speak:hover {
     background-color: red;
